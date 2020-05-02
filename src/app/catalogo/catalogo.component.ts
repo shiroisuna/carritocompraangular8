@@ -13,7 +13,7 @@ import { BookRepository } from './../model/book.repository';
 export class CatalogoComponent implements OnInit {
   
   public book: any;
-  private subscription: Subscription;
+  public subscription: Subscription;
   public books: Array<any> = [];
 
   constructor(private carritoService: CarritoService, private repository: BookRepository) { }
@@ -34,7 +34,7 @@ export class CatalogoComponent implements OnInit {
   }
 
   /**
-   * addProducto
+   * addBook
    */
   addBook(book) {
     this.carritoService.addCarrito(book);
