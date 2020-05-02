@@ -1,0 +1,19 @@
+<div>
+  <span class="title mb-2">
+    Los más Recientes
+  </span>
+</div>
+
+<article class="message" *ngFor="let book of books">
+  <div class="message-header">
+    <p class="subtitle">{{book.name}}</p>
+  </div>
+  <div class="message-body">
+    {{book.descripcion}}
+    <br> Precio: {{book.price}} €
+    <br> Autor: {{book.author}}
+    <div class="message-footer">
+      <button (click)="addBook(book)" class="button is-danger">Añadir al carrito</button>
+    </div>
+  </div>
+</article>

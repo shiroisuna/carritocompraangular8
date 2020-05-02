@@ -1,18 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { NgModule, Injectable } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { CoreModule } from './core/core.module';
+import { MasterpageComponent } from './core/masterpage/masterpage.component';
+import { CarritoService } from './model/carrito.service';
+// import { StoreModule } from './store/store.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CoreModule,
+    FormsModule,
+    HttpModule,
+    // CarritoService
+    
   ],
+  // exports: [CarritoService],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ MasterpageComponent ]
 })
 export class AppModule { }
